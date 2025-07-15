@@ -1,0 +1,10 @@
+{
+  "/user": {
+    "target": "https://randomuser.me/api",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/user": ""
+    }
+  }
+}
