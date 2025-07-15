@@ -112,7 +112,7 @@ export class App implements OnInit {
     return result;
   }
   ngOnInit() {
-    this.http.get<any>('/user/').subscribe(async res => {
+    this.http.get<any>('https://randomuser.me/api/').subscribe(async res => {
       this.user = res.results[0];
       const params = {
         "latitude": this.user.location.coordinates.latitude,
