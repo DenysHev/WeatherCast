@@ -1,0 +1,25 @@
+<div class="card user" *ngIf="user; let u">
+  <div class="user-header">
+    <img [src]="u.picture?.large" alt="User photo" class="user-photo" />
+    <div class="user-info">
+      <h2>{{ u.name.first }} {{ u.name.last }}</h2>
+      <p>{{ u.location.city }}, {{ u.location.state }}, {{ u.location.country }}</p>
+    </div>
+  </div>
+  <div class="user-details">
+    <p><strong>Email:</strong> {{ u.email }}</p>
+    <p><strong>Phone:</strong> {{ u.phone }}</p>
+    <p><strong>Gender:</strong> {{ u.gender }}</p>
+  </div>
+</div>
+
+<div *ngIf="weekSummary.length" class="forecast-week">
+  <h2>Прогноз на тиждень</h2>
+  <div class="forecast">
+    <div *ngFor="let day of weekSummary" class="forecast-item glass">
+      <h4>{{ day.day }}</h4>
+      <img [src]="day.icon" alt="weather" />
+      <p class="weather-desc">{{ day.text }}</p>
+    </div>
+  </div>
+</div>

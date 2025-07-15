@@ -1,0 +1,117 @@
+body {
+  background: linear-gradient(to right top, #6dd5ed, #2193b0);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: #fff;
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.user-info h2 {
+  margin: 0;
+}
+
+.user-details p {
+  margin: 4px 0;
+}
+
+.forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.forecast-item {
+  flex: 1 1 150px;
+  max-width: 180px;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.forecast-item:hover {
+  transform: scale(1.03);
+}
+
+.forecast-item img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.forecast-date {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.weather-desc {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .user-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .forecast {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forecast-item {
+    width: 90%;
+  }
+}
+.forecast-week h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+.forecast-date {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
